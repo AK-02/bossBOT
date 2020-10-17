@@ -620,7 +620,7 @@ async def task():
 									tmp_bossTime[i] = bossTime[i] = nextTime = tmp_bossTime[i]+datetime.timedelta(hours=int(bossData[i][1]), minutes=int(bossData[i][5]))
 									tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
 									tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
-									await client.get_channel(channel).send("```" +  bossData[i][0] + 'のエンド時間が入力されなかったのー！。未記入処理しとくわー( ・∇・)！。```', tts=False)
+									await client.get_channel(channel).send("```" +  bossData[i][0] + 'のエンド時間が入力されなかったのー！未記入処理しとくわー( ・∇・)！。```', tts=False)
 									embed = discord.Embed(
 										description= '```次、' + bossData[i][0] + 'の湧き予想時間は ' + bossTimeString[i][:5] + 'よー ( ・∇・)！。```',
 										color=0xff0000
@@ -637,7 +637,7 @@ async def task():
 									tmp_bossTime[i] = bossTime[i] = nextTime = tmp_bossTime[i]+datetime.timedelta(hours=int(bossData[i][1]), minutes=int(bossData[i][5]))
 									tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
 									tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
-									await client.get_channel(channel).send("```" + bossData[i][0] + 'の「エンド」、または「なし」が入力されなかったのー！。未記入処理しとくわー( ・∇・)！。```')
+									await client.get_channel(channel).send("```" + bossData[i][0] + 'の「エンド」、または「なし」が入力されなかったのー！未記入処理しとくわー( ・∇・)！。```')
 									embed = discord.Embed(
 										description= '```次、' + bossData[i][0] + 'の湧き予想時間は ' + bossTimeString[i][:5] + ' よー( ・∇・)！```',
 										color=0xff0000
